@@ -1,0 +1,26 @@
+Package: enrichdot
+Type: Package
+Title: Publication-Ready Enrichment Dotplots with Automatic Layout
+Version: 0.0.1
+Authors@R: person("Jianhua", "Zhu", email = "XiaoLi1991-star@users.noreply.github.com", role = c("aut", "cre"))
+Author: Jianhua Zhu [aut, cre]
+Maintainer: Jianhua Zhu <XiaoLi1991-star@users.noreply.github.com>
+Description: Lightweight ggplot2 helpers for polished enrichment dotplots from
+    already prepared enrichment result tables. Long terms are wrapped, dot and
+    text sizes are chosen automatically, and fixed-panel saving keeps the
+    plotting area stable. Resolved automatic parameters are printed to support
+    agent-assisted tuning without re-running enrichment analysis.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends:
+    R (>= 4.0.0)
+Imports:
+    ggplot2,
+    grDevices,
+    grid,
+    stats
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

@@ -1,0 +1,5 @@
+export(enrich_palette)
+export(enrich_plot)
+export(inspect_enrich_plot)
+export(save_enrich)
+export(theme_enrich)
