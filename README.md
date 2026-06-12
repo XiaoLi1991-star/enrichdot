@@ -357,6 +357,11 @@ save_enrich(p, "man/figures/enrichdot-dot.png", height = 5.4)
 
 ![enrichdot dotplot](man/figures/enrichdot-dot.png)
 
+Chinese labels work the same way when you choose an available CJK font. PNG
+output uses `ragg::agg_png` by default.
+
+![enrichdot Chinese dotplot](man/figures/enrichdot-chinese.png)
+
 ## Main API
 
 - `enrich_plot()` returns a ggplot object.
