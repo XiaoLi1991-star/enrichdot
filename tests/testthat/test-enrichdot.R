@@ -305,6 +305,12 @@ test_that("save_enrich can keep a fixed plot panel width", {
   expect_error(save_enrich(plot, tempfile(fileext = ".png"), panel_width = 0), "positive number")
 })
 
+test_that("png output defaults to the ragg device", {
+  expect_identical(default_save_device("plot.png"), ragg::agg_png)
+  expect_identical(default_save_device("plot.PNG"), ragg::agg_png)
+  expect_identical(default_save_device("plot.pdf"), grDevices::pdf)
+})
+
 test_that("inspect_enrich_plot returns agent-friendly diagnostics", {
   enrichment <- data.frame(
     Description = c(

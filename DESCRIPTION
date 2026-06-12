@@ -20,6 +20,7 @@ Imports:
     ggplot2,
     grDevices,
     grid,
+    ragg,
     stats
 Suggests:
     testthat (>= 3.0.0)

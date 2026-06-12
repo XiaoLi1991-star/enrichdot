@@ -16,7 +16,13 @@ save_enrich(plot, filename, width = "auto", height = "auto", dpi = 320,
 size from the plot content. Automatic height grows with the number of displayed
 terms; automatic width grows with labels, legends, and the fixed panel width.}
 \item{dpi}{Raster output resolution.}
-\item{device}{Optional graphics device passed to \code{ggplot2::ggsave()}.}
+\item{device}{Optional graphics device passed to \code{ggplot2::ggsave()}.
+When \code{NULL}, \code{.png} output uses \code{ragg::agg_png} by default for
+cleaner raster text and better system-font rendering. Other extensions keep
+the standard \code{ggsave()} device behavior. For Chinese PDF output, use an
+available CJK font in \code{enrich_plot()} and save with
+\code{device = grDevices::cairo_pdf}, optionally passing
+\code{family = "Microsoft YaHei"} through \code{save_enrich()}.}
 \item{panel_width}{Fixed plot panel width in inches, \code{"auto"} for a
 content-based default, or \code{NULL} to leave the panel under standard ggplot2
 layout control. When supplied, the middle plotting area keeps this width even

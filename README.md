@@ -232,7 +232,12 @@ Panel style parameters:
 - `height`: Output height in inches, or `"auto"`. Default: `"auto"`.
 - `dpi`: Raster output resolution. Default: `320`.
 - `device`: Optional graphics device passed to `ggplot2::ggsave()`. Default:
-  `NULL`, so ggplot2 chooses from the filename extension.
+  `NULL`. For `.png` files, enrichdot uses `ragg::agg_png` by default for
+  cleaner raster text and better system-font rendering; other extensions keep
+  the standard `ggsave()` device behavior.
+  For Chinese PDF output, use an available CJK font in `enrich_plot()` and
+  save with `device = grDevices::cairo_pdf`, optionally passing
+  `family = "Microsoft YaHei"` through `save_enrich()`.
 - `panel_width`: Fixed middle plotting panel width in inches, `"auto"`, or
   `NULL`. Default: `"auto"`. Use a number to keep the plotting area stable
   when labels are long; use `NULL` for standard ggplot2 layout.

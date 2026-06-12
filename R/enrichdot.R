@@ -640,7 +640,7 @@ format_resolved_number <- function(value) {
 }
 
 fixed_panel_grob <- function(plot, panel_width) {
-  grob <- ggplot2::ggplotGrob(plot)
+  grob <- with_measure_device(ggplot2::ggplotGrob(plot))
   panel_cols <- unique(grob$layout$l[grepl("^panel", grob$layout$name)])
   if (length(panel_cols) == 0) {
     stop("`plot` does not contain a ggplot panel.", call. = FALSE)
@@ -657,16 +657,20 @@ as_panel_width_unit <- function(panel_width) {
 }
 
 measure_grob_width <- function(grob) {
+  with_measure_device(grid::convertWidth(sum(grob$widths), "in", valueOnly = TRUE))
+}
+
+with_measure_device <- function(expr) {
   opened_device <- is.null(grDevices::dev.list())
   if (opened_device) {
     tmp <- tempfile(fileext = ".png")
-    grDevices::png(tmp, width = 1200, height = 900, res = 100)
+    ragg::agg_png(tmp, width = 1200, height = 900, res = 100)
     on.exit({
       grDevices::dev.off()
       unlink(tmp)
     }, add = TRUE)
   }
-  grid::convertWidth(sum(grob$widths), "in", valueOnly = TRUE)
+  force(expr)
 }
 
 resolve_panel_width <- function(plot, panel_width) {
@@ -1120,7 +1124,7 @@ default_save_device <- function(filename) {
   }
   switch(
     extension,
-    png = grDevices::png,
+    png = ragg::agg_png,
     jpg = grDevices::jpeg,
     jpeg = grDevices::jpeg,
     tif = grDevices::tiff,
