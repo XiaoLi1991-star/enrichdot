@@ -48,7 +48,7 @@ example_file <- system.file("extdata", "enrichment_example.tsv", package = "enri
 enrich_result <- read.delim(example_file, stringsAsFactors = FALSE)
 
 p <- enrich_plot(
-  enrich_result[enrich_result$Cluster == "Activated", ],
+  enrich_result,
   term = "Description",
   value = "p.adjust",
   count = "Count",
@@ -101,7 +101,7 @@ enrich_plot:
   dot_min_size: 2.5
   dot_max_size: 8.4
 save_enrich auto defaults:
-  width: 7.877
+  width: 7.972
   height: 4.2
   panel_width: 2.35
   width_padding: 0.15
@@ -339,17 +339,15 @@ p <- enrich_plot(
 ## Examples
 
 ```r
-activated <- enrich_result[enrich_result$Cluster == "Activated", ]
-
 p <- enrich_plot(
-  activated,
+  enrich_result,
   layout = "single",
   top_n = 10,
   title = "Immune pathway enrichment",
   subtitle = "Journal-style enrichment dotplot with cleaner labels"
 )
 
-save_enrich(p, "man/figures/enrichdot-dot.png", width = 7.875, height = 5.4)
+save_enrich(p, "man/figures/enrichdot-dot.png", height = 5.4)
 ```
 
 ![enrichdot dotplot](man/figures/enrichdot-dot.png)

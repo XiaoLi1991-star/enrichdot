@@ -1,21 +1,21 @@
-Description	p.adjust	Count	GeneRatio	Cluster
-Interferon gamma mediated signaling pathway	0.0008	24	24/260	Activated
-Positive regulation of T cell activation	0.0016	31	31/260	Activated
-Antigen processing and presentation of peptide antigen	0.0032	27	27/260	Activated
-Cytokine mediated signaling pathway	0.0064	22	22/260	Activated
-Response to oxidative stress	0.0105	18	18/260	Activated
-Extracellular matrix organization	0.0140	15	15/260	Activated
-Mitochondrial respiratory chain complex assembly	0.0180	17	17/260	Activated
-Regulation of epithelial cell migration	0.0240	13	13/260	Activated
-Fatty acid beta oxidation using acyl CoA dehydrogenase	0.0310	11	11/260	Activated
-Chromatin remodeling at centromere	0.0390	9	9/260	Activated
-Leukocyte mediated immunity	0.0012	26	26/240	Resolved
-Regulation of apoptotic signaling pathway	0.0028	21	21/240	Resolved
-Cellular response to interleukin 1	0.0055	19	19/240	Resolved
-Regulation of MAPK cascade	0.0086	16	16/240	Resolved
-Collagen fibril organization	0.0130	14	14/240	Resolved
-Adaptive immune response	0.0175	18	18/240	Resolved
-Cellular response to lipid	0.0250	12	12/240	Resolved
-Regulation of cell adhesion	0.0330	10	10/240	Resolved
-Vesicle mediated transport	0.0410	8	8/240	Resolved
-Negative regulation of inflammatory response	0.0520	7	7/240	Resolved
+Description	p.adjust	Count	GeneRatio
+Interferon gamma mediated signaling pathway	0.0008	24	24/260
+Positive regulation of T cell activation	0.0016	31	31/260
+Antigen processing and presentation of peptide antigen	0.0032	27	27/260
+Cytokine mediated signaling pathway	0.0064	22	22/260
+Response to oxidative stress	0.0105	18	18/260
+Extracellular matrix organization	0.0140	15	15/260
+Mitochondrial respiratory chain complex assembly	0.0180	17	17/260
+Regulation of epithelial cell migration	0.0240	13	13/260
+Fatty acid beta oxidation using acyl CoA dehydrogenase	0.0310	11	11/260
+Chromatin remodeling at centromere	0.0390	9	9/260
+Leukocyte mediated immunity	0.0012	26	26/240
+Regulation of apoptotic signaling pathway	0.0028	21	21/240
+Cellular response to interleukin 1	0.0055	19	19/240
+Regulation of MAPK cascade	0.0086	16	16/240
+Collagen fibril organization	0.0130	14	14/240
+Adaptive immune response	0.0175	18	18/240
+Cellular response to lipid	0.0250	12	12/240
+Regulation of cell adhesion	0.0330	10	10/240
+Vesicle mediated transport	0.0410	8	8/240
+Negative regulation of inflammatory response	0.0520	7	7/240
